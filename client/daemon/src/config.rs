@@ -26,6 +26,10 @@ include!("config/hostname.rs");
 pub(crate) mod routes;
 #[allow(dead_code)]
 mod routes_config;
+// Sidecar loader for the subnet-router document. Its entry point is not yet
+// called from the daemon startup path.
+#[allow(dead_code)]
+pub(crate) mod subnet_loader;
 #[cfg(test)]
 include!("config/tests.rs");
 #[cfg(all(test, unix))]
