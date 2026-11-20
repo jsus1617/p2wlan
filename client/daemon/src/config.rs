@@ -23,7 +23,7 @@ include!("config/hostname.rs");
 // Subnet-route validation and LPM table. Not yet wired into NetworkConfig;
 // that needs the full types.rs, which has not been edited in this change.
 #[allow(dead_code)]
-mod routes;
+pub(crate) mod routes;
 #[allow(dead_code)]
 mod routes_config;
 #[cfg(test)]
