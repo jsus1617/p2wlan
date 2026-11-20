@@ -17,6 +17,7 @@ message Node {
   string virtual_ip = 5;      // Assigned virtual IP (10.20.x.x)
   int64 last_seen = 6;        // Unix timestamp of last activity
   bool online = 7;            // Whether the node is currently online
+  repeated string advertised_routes = 8;  // Subnets this node forwards for (CIDR)
 }
 
 // ============================================================
