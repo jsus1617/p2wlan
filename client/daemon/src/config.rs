@@ -20,6 +20,10 @@ include!("config/types.rs");
 mod private_file;
 include!("config/persistence.rs");
 include!("config/hostname.rs");
+// Subnet-route validation and LPM table. Not yet wired into NetworkConfig;
+// that needs the full types.rs, which has not been edited in this change.
+#[allow(dead_code)]
+mod routes;
 #[cfg(test)]
 include!("config/tests.rs");
 #[cfg(all(test, unix))]
