@@ -23,6 +23,11 @@ use crate::request_carriage::{RawOutboundSink, RawRequestDelivery, RequestBindin
 mod ingress_evidence;
 pub(crate) use ingress_evidence::PacketIngressEvidence;
 
+// Subnet-router forwarding decisions. Pure logic; wired into the outbound
+// path by a later, separately reviewed change.
+#[allow(dead_code)]
+mod subnet;
+
 include!("dataplane/core.rs");
 include!("dataplane/normalization.rs");
 include!("dataplane/logging.rs");
