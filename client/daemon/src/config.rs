@@ -24,6 +24,8 @@ include!("config/hostname.rs");
 // that needs the full types.rs, which has not been edited in this change.
 #[allow(dead_code)]
 mod routes;
+#[allow(dead_code)]
+mod routes_config;
 #[cfg(test)]
 include!("config/tests.rs");
 #[cfg(all(test, unix))]
